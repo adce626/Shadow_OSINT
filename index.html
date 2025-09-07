@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow_OSINT - مصادر الاستخبارات مفتوحة المصدر</title>
+    <meta name="description" content="موقع Shadow_OSINT - مجموعة شاملة من أدوات ومصادر الاستخبارات مفتوحة المصدر">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-search"></i>
+                    <h1>Shadow<span class="highlight">_OSINT</span></h1>
+                </div>
+                <p class="subtitle">مصادر الاستخبارات مفتوحة المصدر</p>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="ابحث عن الأدوات والمصادر..." autocomplete="off">
+                <button class="search-btn" onclick="searchResources()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="suggest-resource">
+                <button class="suggest-btn" onclick="suggestResource()">
+                    <i class="fas fa-plus"></i>
+                    اقتراح مصدر
+                </button>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <section class="filters">
+            <h3><i class="fas fa-filter"></i> المرشحات</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">جميع المصادر</button>
+                <button class="filter-btn" data-category="trending">المصادر الرائجة</button>
+            </div>
+        </section>
+
+        <!-- Categories Grid -->
+        <main class="categories-grid">
+            <div class="category-card" data-category="home">
+                <div class="card-header">
+                    <i class="fas fa-home"></i>
+                    <h3>الرئيسية</h3>
+                </div>
+                <p>نقطة البداية لجميع عمليات التحقيق</p>
+            </div>
+
+            <div class="category-card" data-category="username">
+                <div class="card-header">
+                    <i class="fas fa-user"></i>
+                    <h3>أسماء المستخدمين</h3>
+                </div>
+                <p>أدوات البحث عن أسماء المستخدمين عبر المنصات</p>
+            </div>
+
+            <div class="category-card" data-category="email">
+                <div class="card-header">
+                    <i class="fas fa-envelope"></i>
+                    <h3>عناوين البريد الإلكتروني</h3>
+                </div>
+                <p>أدوات التحقق من البريد الإلكتروني والبحث</p>
+            </div>
+
+            <div class="category-card" data-category="domain">
+                <div class="card-header">
+                    <i class="fas fa-globe"></i>
+                    <h3>أسماء النطاقات</h3>
+                </div>
+                <p>أدوات تحليل النطاقات ومعلومات الخادم</p>
+            </div>
+
+            <div class="category-card" data-category="ip">
+                <div class="card-header">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>عناوين IP و MAC</h3>
+                </div>
+                <p>أدوات تتبع الشبكة وتحليل عناوين IP</p>
+            </div>
+
+            <div class="category-card" data-category="media">
+                <div class="card-header">
+                    <i class="fas fa-photo-video"></i>
+                    <h3>الصور والفيديو والمستندات</h3>
+                </div>
+                <p>أدوات تحليل الملفات والبيانات الوصفية</p>
+            </div>
+
+            <div class="category-card" data-category="social">
+                <div class="card-header">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>الشبكات الاجتماعية</h3>
+                </div>
+                <p>أدوات مراقبة وتحليل وسائل التواصل الاجتماعي</p>
+            </div>
+
+            <div class="category-card" data-category="messaging">
+                <div class="card-header">
+                    <i class="fas fa-comments"></i>
+                    <h3>المراسلة الفورية</h3>
+                </div>
+                <p>أدوات تحليل تطبيقات المراسلة</p>
+            </div>
+
+            <div class="category-card" data-category="people">
+                <div class="card-header">
+                    <i class="fas fa-users"></i>
+                    <h3>محركات البحث عن الأشخاص</h3>
+                </div>
+                <p>أدوات البحث عن الأشخاص والهوية</p>
+            </div>
+
+            <div class="category-card" data-category="dating">
+                <div class="card-header">
+                    <i class="fas fa-heart"></i>
+                    <h3>مواقع المواعدة</h3>
+                </div>
+                <p>أدوات البحث في تطبيقات المواعدة</p>
+            </div>
+
+            <div class="category-card" data-category="phone">
+                <div class="card-header">
+                    <i class="fas fa-phone"></i>
+                    <h3>أرقام الهاتف</h3>
+                </div>
+                <p>أدوات التحقق من أرقام الهاتف وتتبعها</p>
+            </div>
+
+            <div class="category-card" data-category="records">
+                <div class="card-header">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>السجلات العامة</h3>
+                </div>
+                <p>قواعد البيانات والسجلات الحكومية</p>
+            </div>
+
+            <div class="category-card" data-category="business">
+                <div class="card-header">
+                    <i class="fas fa-building"></i>
+                    <h3>السجلات التجارية</h3>
+                </div>
+                <p>معلومات الشركات والأعمال التجارية</p>
+            </div>
+
+            <div class="category-card" data-category="transport">
+                <div class="card-header">
+                    <i class="fas fa-plane"></i>
+                    <h3>النقل</h3>
+                </div>
+                <p>أدوات تتبع الطائرات والسفن والمركبات</p>
+            </div>
+
+            <div class="category-card" data-category="geolocation">
+                <div class="card-header">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>أدوات الموقع الجغرافي والخرائط</h3>
+                </div>
+                <p>أدوات تحديد المواقع والخرائط التفاعلية</p>
+            </div>
+
+            <div class="category-card" data-category="search">
+                <div class="card-header">
+                    <i class="fas fa-search-plus"></i>
+                    <h3>محركات البحث</h3>
+                </div>
+                <p>محركات بحث متخصصة ومتقدمة</p>
+            </div>
+
+            <div class="category-card" data-category="forums">
+                <div class="card-header">
+                    <i class="fas fa-comments"></i>
+                    <h3>المنتديات والمدونات و IRC</h3>
+                </div>
+                <p>أدوات البحث في المجتمعات والمحادثات</p>
+            </div>
+
+            <div class="category-card" data-category="archives">
+                <div class="card-header">
+                    <i class="fas fa-archive"></i>
+                    <h3>الأرشيف</h3>
+                </div>
+                <p>أدوات الوصول للمحتوى المؤرشف</p>
+            </div>
+
+            <div class="category-card" data-category="translation">
+                <div class="card-header">
+                    <i class="fas fa-language"></i>
+                    <h3>الترجمة</h3>
+                </div>
+                <p>أدوات الترجمة وتحليل اللغات</p>
+            </div>
+
+            <div class="category-card" data-category="metadata">
+                <div class="card-header">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>البيانات الوصفية</h3>
+                </div>
+                <p>أدوات استخراج وتحليل البيانات الوصفية</p>
+            </div>
+
+            <div class="category-card" data-category="mobile">
+                <div class="card-header">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>محاكاة الجوال</h3>
+                </div>
+                <p>أدوات اختبار وتحليل التطبيقات المحمولة</p>
+            </div>
+
+            <div class="category-card" data-category="terrorism">
+                <div class="card-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>الإرهاب</h3>
+                </div>
+                <p>أدوات مراقبة التهديدات والأنشطة المشبوهة</p>
+            </div>
+
+            <div class="category-card" data-category="darkweb">
+                <div class="card-header">
+                    <i class="fas fa-user-secret"></i>
+                    <h3>الويب المظلم</h3>
+                </div>
+                <p>أدوات استكشاف الشبكات المخفية</p>
+            </div>
+
+            <div class="category-card" data-category="crypto">
+                <div class="card-header">
+                    <i class="fas fa-coins"></i>
+                    <h3>العملات الرقمية</h3>
+                </div>
+                <p>أدوات تتبع وتحليل المعاملات الرقمية</p>
+            </div>
+
+            <div class="category-card" data-category="classifieds">
+                <div class="card-header">
+                    <i class="fas fa-list"></i>
+                    <h3>الإعلانات المبوبة</h3>
+                </div>
+                <p>أدوات البحث في مواقع الإعلانات</p>
+            </div>
+
+            <div class="category-card" data-category="encoding">
+                <div class="card-header">
+                    <i class="fas fa-code"></i>
+                    <h3>التشفير وفك التشفير</h3>
+                </div>
+                <p>أدوات التشفير وتحليل البيانات المشفرة</p>
+            </div>
+
+            <div class="category-card" data-category="tools">
+                <div class="card-header">
+                    <i class="fas fa-tools"></i>
+                    <h3>الأدوات</h3>
+                </div>
+                <p>أدوات متنوعة للتحقيق والتحليل</p>
+            </div>
+
+            <div class="category-card" data-category="ai">
+                <div class="card-header">
+                    <i class="fas fa-robot"></i>
+                    <h3>أدوات الذكاء الاصطناعي</h3>
+                </div>
+                <p>أدوات الذكاء الاصطناعي للتحليل والتحقيق</p>
+            </div>
+
+            <div class="category-card" data-category="malware">
+                <div class="card-header">
+                    <i class="fas fa-virus"></i>
+                    <h3>تحليل الملفات الضارة</h3>
+                </div>
+                <p>أدوات فحص وتحليل البرمجيات الخبيثة</p>
+            </div>
+
+            <div class="category-card" data-category="exploits">
+                <div class="card-header">
+                    <i class="fas fa-bug"></i>
+                    <h3>الثغرات والاستشارات</h3>
+                </div>
+                <p>قواعد بيانات الثغرات الأمنية</p>
+            </div>
+
+            <div class="category-card" data-category="threat">
+                <div class="card-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>استخبارات التهديدات</h3>
+                </div>
+                <p>أدوات رصد وتحليل التهديدات السيبرانية</p>
+            </div>
+
+            <div class="category-card" data-category="opsec">
+                <div class="card-header">
+                    <i class="fas fa-lock"></i>
+                    <h3>الأمان التشغيلي</h3>
+                </div>
+                <p>أدوات وممارسات الأمان التشغيلي</p>
+            </div>
+
+            <div class="category-card" data-category="documentation">
+                <div class="card-header">
+                    <i class="fas fa-camera"></i>
+                    <h3>التوثيق وجمع الأدلة</h3>
+                </div>
+                <p>أدوات توثيق وحفظ الأدلة الرقمية</p>
+            </div>
+
+            <div class="category-card" data-category="training">
+                <div class="card-header">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>التدريب</h3>
+                </div>
+                <p>مصادر التعلم والتدريب على OSINT</p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Shadow_OSINT. جميع الحقوق محفوظة.</p>
+                <p>مصادر الاستخبارات مفتوحة المصدر للمحققين والباحثين</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
