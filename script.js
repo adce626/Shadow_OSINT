@@ -19,7 +19,15 @@ const osintCategories = {
             { name: "Names Directory", url: "https://namesdir.com/", description: "دليل الأسماء" },
             { name: "Github User Search", url: "https://api.github.com/users/", description: "البحث عن مستخدمي GitHub" },
             { name: "Keybase", url: "https://keybase.io/", description: "التحقق من الهوية" },
-            { name: "MIT PGP Key Server", url: "http://pgp.mit.edu/", description: "خادم مفاتيح PGP" }
+            { name: "MIT PGP Key Server", url: "http://pgp.mit.edu/", description: "خادم مفاتيح PGP" },
+            { name: "Sherlock", url: "https://github.com/sherlock-project/sherlock", description: "أداة البحث الشاملة عن أسماء المستخدمين" },
+            { name: "Social Analyzer", url: "https://github.com/qeeqbox/social-analyzer", description: "تحليل الحسابات الاجتماعية" },
+            { name: "Username Search", url: "https://usernamesearch.xyz/", description: "البحث المتقدم عن أسماء المستخدمين" },
+            { name: "Maigret", url: "https://github.com/soxoj/maigret", description: "جمع معلومات أسماء المستخدمين" },
+            { name: "Social Mapper", url: "https://github.com/Greenwolf/social_mapper", description: "ربط الحسابات الاجتماعية" },
+            { name: "Nexfil", url: "https://github.com/thewhiteh4t/nexfil", description: "البحث عن الملفات الشخصية" },
+            { name: "Blackbird", url: "https://github.com/p1ngul1n0/blackbird", description: "البحث عن أسماء المستخدمين" },
+            { name: "Username Anarchy", url: "https://github.com/urbanadventurer/username-anarchy", description: "توليد أسماء المستخدمين المحتملة" }
         ]
     },
     email: {
@@ -45,7 +53,16 @@ const osintCategories = {
             { name: "Hudson Rock", url: "https://www.hudsonrock.com/threat-intelligence-cybercrime-tools", description: "استخبارات التهديدات" },
             { name: "DeHashed", url: "https://dehashed.com/", description: "قاعدة بيانات التسريبات" },
             { name: "Ashley Madison Emails", url: "https://ashley.cynic.al/", description: "فحص تسريب Ashley Madison" },
-            { name: "MxToolbox", url: "http://mxtoolbox.com/", description: "أدوات البريد الإلكتروني" }
+            { name: "MxToolbox", url: "http://mxtoolbox.com/", description: "أدوات البريد الإلكتروني" },
+            { name: "Phonebook.cz", url: "https://phonebook.cz/", description: "البحث في قواعد البيانات العامة" },
+            { name: "Email Checker", url: "https://email-checker.net/", description: "التحقق من صحة البريد الإلكتروني" },
+            { name: "Clearbit Connect", url: "https://connect.clearbit.com/", description: "العثور على معلومات الاتصال" },
+            { name: "Find That Lead", url: "https://findthatlead.com/", description: "البحث عن عناوين البريد الإلكتروني" },
+            { name: "RocketReach", url: "https://rocketreach.co/", description: "البحث عن معلومات الاتصال" },
+            { name: "Snov.io", url: "https://snov.io/", description: "العثور والتحقق من البريد الإلكتروني" },
+            { name: "EmailHippo", url: "https://www.emailhippo.com/", description: "التحقق من البريد الإلكتروني" },
+            { name: "NeverBounce", url: "https://neverbounce.com/", description: "التحقق من قائمة البريد الإلكتروني" },
+            { name: "ZeroBounce", url: "https://www.zerobounce.net/", description: "التحقق والتنظيف" }
         ]
     },
     domain: {
@@ -81,7 +98,16 @@ const osintCategories = {
             { name: "DNS Dumpster", url: "https://dnsdumpster.com/", description: "بحث DNS" },
             { name: "BuiltWith", url: "http://builtwith.com/", description: "تقنيات المواقع" },
             { name: "Wappalyzer", url: "https://wappalyzer.com/", description: "تحليل تقنيات المواقع" },
-            { name: "Netcraft", url: "http://toolbar.netcraft.com/site_report?url=undefined#last_reboot", description: "تقارير المواقع" }
+            { name: "Netcraft", url: "http://toolbar.netcraft.com/site_report?url=undefined#last_reboot", description: "تقارير المواقع" },
+            { name: "Spyse", url: "https://spyse.com/", description: "استطلاع الإنترنت" },
+            { name: "BGP.he.net", url: "https://bgp.he.net/", description: "معلومات BGP والشبكة" },
+            { name: "RIPE Stat", url: "https://stat.ripe.net/", description: "إحصائيات الشبكة" },
+            { name: "Amass", url: "https://github.com/OWASP/Amass", description: "أداة اكتشاف شاملة" },
+            { name: "Subfinder", url: "https://github.com/projectdiscovery/subfinder", description: "اكتشاف النطاقات الفرعية" },
+            { name: "Assetfinder", url: "https://github.com/tomnomnom/assetfinder", description: "البحث عن الأصول" },
+            { name: "Chaos", url: "https://chaos.projectdiscovery.io/", description: "قاعدة بيانات النطاقات الفرعية" },
+            { name: "Certificate Spotter", url: "https://sslmate.com/certspotter/", description: "مراقبة الشهادات" },
+            { name: "Findomain", url: "https://github.com/Findomain/Findomain", description: "أسرع أداة للنطاقات الفرعية" }
         ]
     },
     ip: {
@@ -101,7 +127,16 @@ const osintCategories = {
             { name: "GeoIP Lookup", url: "https://geoip-lookup.org/", description: "البحث الجغرافي لـ IP" },
             { name: "DB-IP", url: "https://db-ip.com/", description: "قاعدة بيانات IP" },
             { name: "IPStack", url: "https://ipstack.com/", description: "تحديد موقع IP" },
-            { name: "MaxMind GeoIP2", url: "https://www.maxmind.com/", description: "خدمات تحديد المواقع الجغرافية" }
+            { name: "MaxMind GeoIP2", url: "https://www.maxmind.com/", description: "خدمات تحديد المواقع الجغرافية" },
+            { name: "IPQualityScore", url: "https://www.ipqualityscore.com/", description: "جودة وسمعة IP" },
+            { name: "Greynoise", url: "https://viz.greynoise.io/", description: "ضوضاء الإنترنت" },
+            { name: "BinaryEdge", url: "https://www.binaryedge.io/", description: "أمان الإنترنت" },
+            { name: "ZoomEye", url: "https://www.zoomeye.org/", description: "محرك بحث الأمان السيبراني" },
+            { name: "Onyphe", url: "https://www.onyphe.io/", description: "تجميع البيانات السيبرانية" },
+            { name: "Criminalip", url: "https://www.criminalip.io/", description: "استخبارات التهديدات" },
+            { name: "Netlas", url: "https://netlas.io/", description: "محرك بحث الشبكة" },
+            { name: "FOFA", url: "https://fofa.info/", description: "محرك بحث الأمان السيبراني" },
+            { name: "Hunter.how", url: "https://hunter.how/", description: "محرك بحث الإنترنت" }
         ]
     },
     media: {
@@ -139,7 +174,16 @@ const osintCategories = {
             { name: "LinkedIn Sales Navigator", url: "https://www.linkedin.com/", description: "البحث المتقدم في LinkedIn" },
             { name: "Reddit Search", url: "https://www.reddit.com/search/", description: "البحث في Reddit" },
             { name: "YouTube Search", url: "https://www.youtube.com/", description: "البحث في YouTube" },
-            { name: "TikTok Search", url: "https://www.tiktok.com/", description: "البحث في TikTok" }
+            { name: "TikTok Search", url: "https://www.tiktok.com/", description: "البحث في TikTok" },
+            { name: "Pipl", url: "https://pipl.com/", description: "بحث شامل عن الأشخاص" },
+            { name: "Social Catfish", url: "https://socialcatfish.com/", description: "البحث العكسي في وسائل التواصل" },
+            { name: "Spokeo", url: "https://www.spokeo.com/", description: "البحث عن الأشخاص" },
+            { name: "BeenVerified", url: "https://www.beenverified.com/", description: "التحقق من الهوية" },
+            { name: "TruthFinder", url: "https://www.truthfinder.com/", description: "البحث عن الخلفية" },
+            { name: "InstantCheckmate", url: "https://www.instantcheckmate.com/", description: "فحص الخلفية الفوري" },
+            { name: "WhitePages", url: "https://www.whitepages.com/", description: "دليل الهواتف" },
+            { name: "Intelius", url: "https://www.intelius.com/", description: "تقارير الأشخاص" },
+            { name: "PeopleFinder", url: "https://www.peoplefinder.com/", description: "محرك بحث الأشخاص" }
         ]
     },
     geolocation: {
@@ -158,7 +202,16 @@ const osintCategories = {
             { name: "Geocaching", url: "https://www.geocaching.com/", description: "البحث عن الكنوز الجغرافية" },
             { name: "Overpass Turbo", url: "https://overpass-turbo.eu/", description: "استعلام بيانات OpenStreetMap" },
             { name: "USGS Earth Explorer", url: "https://earthexplorer.usgs.gov/", description: "مستكشف الأرض" },
-            { name: "NASA Worldview", url: "https://worldview.earthdata.nasa.gov/", description: "عرض بيانات الأرض من NASA" }
+            { name: "NASA Worldview", url: "https://worldview.earthdata.nasa.gov/", description: "عرض بيانات الأرض من NASA" },
+            { name: "Sentinel Hub", url: "https://www.sentinel-hub.com/", description: "صور الأقمار الصناعية" },
+            { name: "Planet Labs", url: "https://www.planet.com/", description: "صور الأرض اليومية" },
+            { name: "Zoom Earth", url: "https://zoom.earth/", description: "صور الأقمار الصناعية الحية" },
+            { name: "EOS LandViewer", url: "https://eos.com/landviewer/", description: "عارض صور الأقمار الصناعية" },
+            { name: "Copernicus Browser", url: "https://browser.dataspace.copernicus.eu/", description: "متصفح Copernicus" },
+            { name: "Flash Earth", url: "https://www.flashearth.com/", description: "عرض صور متعددة" },
+            { name: "QGIS", url: "https://qgis.org/", description: "نظام معلومات جغرافية" },
+            { name: "GeoPy", url: "https://geopy.readthedocs.io/", description: "مكتبة Python للجغرافيا" },
+            { name: "Nominatim", url: "https://nominatim.org/", description: "خدمة الترميز الجغرافي" }
         ]
     },
     search: {
@@ -228,7 +281,16 @@ const osintCategories = {
             { name: "Malware Bazaar", url: "https://bazaar.abuse.ch/", description: "قاعدة بيانات البرمجيات الخبيثة" },
             { name: "URLHaus", url: "https://urlhaus.abuse.ch/", description: "قاعدة بيانات المواقع الخبيثة" },
             { name: "ThreatMiner", url: "https://www.threatminer.org/", description: "استخبارات التهديدات" },
-            { name: "IBM X-Force", url: "https://exchange.xforce.ibmcloud.com/", description: "استخبارات التهديدات" }
+            { name: "IBM X-Force", url: "https://exchange.xforce.ibmcloud.com/", description: "استخبارات التهديدات" },
+            { name: "Pulsedive", url: "https://pulsedive.com/", description: "استخبارات التهديدات المجانية" },
+            { name: "Recorded Future", url: "https://www.recordedfuture.com/", description: "ذكاء التهديدات" },
+            { name: "Shodan InternetDB", url: "https://internetdb.shodan.io/", description: "قاعدة بيانات الإنترنت" },
+            { name: "SecurityTrails", url: "https://securitytrails.com/", description: "تاريخ DNS والتهديدات" },
+            { name: "URLScan.io", url: "https://urlscan.io/", description: "فحص المواقع" },
+            { name: "Inquest Labs", url: "https://labs.inquest.net/", description: "تحليل البرمجيات الخبيثة" },
+            { name: "Maltiverse", url: "https://maltiverse.com/", description: "منصة استخبارات التهديدات" },
+            { name: "C1fApp", url: "https://www.c1fapp.com/", description: "منصة استخبارات مجانية" },
+            { name: "Triage", url: "https://tria.ge/", description: "تحليل البرمجيات الخبيثة" }
         ]
     }
 };
