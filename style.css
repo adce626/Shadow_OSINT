@@ -24,9 +24,9 @@
     --text-muted: #888888;
     
     /* Shadow Effects */
-    --glow-small: 0 0 10px var(--primary-green);
-    --glow-medium: 0 0 20px var(--primary-green), 0 0 40px var(--primary-green);
-    --glow-large: 0 0 30px var(--primary-green), 0 0 60px var(--primary-green), 0 0 90px var(--primary-green);
+    --glow-small: 0 0 5px var(--primary-green);
+    --glow-medium: 0 0 10px var(--primary-green), 0 0 20px var(--primary-green);
+    --glow-large: 0 0 15px var(--primary-green), 0 0 30px var(--primary-green), 0 0 45px var(--primary-green);
 }
 
 body {
@@ -138,8 +138,8 @@ body::before {
 }
 
 @keyframes textGlow {
-    0% { text-shadow: 0 0 10px var(--primary-green); }
-    100% { text-shadow: 0 0 20px var(--primary-green), 0 0 40px var(--primary-green); }
+    0% { text-shadow: 0 0 5px var(--primary-green); }
+    100% { text-shadow: 0 0 10px var(--primary-green), 0 0 20px var(--primary-green); }
 }
 
 .subtitle {
@@ -496,4 +496,68 @@ body::before {
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* User Info Styles */
+.user-info {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--bg-dark);
+    border-radius: 15px;
+    border: 1px solid var(--primary-green);
+}
+
+.user-info h4 {
+    color: var(--primary-green);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.user-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.username {
+    color: var(--neon-green);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-shadow: 0 0 5px var(--primary-green);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid var(--text-muted);
+    border-radius: 20px;
+    background: var(--bg-card);
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.social-link:hover {
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+    background: var(--bg-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
+}
+
+.social-link i {
+    font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+    .user-links {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
