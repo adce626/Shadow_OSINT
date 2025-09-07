@@ -1,6 +1,18 @@
 # Overview
 
-Shadow_OSINT is an Arabic-language web application that serves as a comprehensive directory for Open Source Intelligence (OSINT) tools and resources. The application provides a curated collection of cybersecurity investigation tools, organized by categories such as usernames, email addresses, domains, IP addresses, social networks, and geolocation. It features a modern, dark-themed interface with phosphorescent green accents and supports search functionality to help security researchers and investigators quickly find relevant OSINT resources.
+Shadow_OSINT is an Arabic-language web application that serves as a comprehensive directory for Open Source Intelligence (OSINT) tools and resources. The application provides a curated collection of cybersecurity investigation tools with over 500+ real OSINT resources, organized by categories including usernames, email addresses, domains, IP addresses, images/media, social networks, geolocation, search engines, threat intelligence, cryptocurrency, malware analysis, and many more specialized categories. It features a modern, dark-themed interface with phosphorescent green accents and supports search functionality, resource suggestion capabilities, and user contact information to help security researchers and investigators quickly find relevant OSINT resources.
+
+# Recent Changes
+
+**September 2025:**
+- Expanded resource database from 50+ to 500+ real OSINT tools from comprehensive JSON dataset
+- Added 25+ specialized categories including threat intelligence, cryptocurrency, malware analysis, mobile emulation, terrorism research, dark web resources, and more
+- Implemented resource suggestion form with email functionality to adce626@gmail.com
+- Added user contact information footer (username: adce626, x.com/adce626, github.com/adce626)
+- Reduced glow effect intensity for better eye comfort while maintaining phosphorescent green theme
+- Enhanced modal system for resource display with detailed descriptions and direct links
+- Improved responsive design and mobile compatibility
+- Added comprehensive search and filtering capabilities across all categories
 
 # User Preferences
 
