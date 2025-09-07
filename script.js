@@ -1220,3 +1220,14 @@ function debounce(func, wait) {
 const debouncedSearch = debounce(handleSearch, 300);
 searchInput.removeEventListener('input', handleSearch);
 searchInput.addEventListener('input', debouncedSearch);
+
+categoryCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const category = card.dataset.category;
+        if (resources[category]) {
+            showCategoryResources(category); // دالة تعرض الأدوات بشكل Modal أو في الصفحة
+        } else {
+            showGenericCategoryInfo(category); // الرسالة الافتراضية
+        }
+    });
+});
